@@ -1,12 +1,11 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 
-public class Ventana extends JFrame {
+public class VentanaMoneda extends JFrame {
     public JPanel panel;
-    public Ventana(){
+    public VentanaMoneda(){
         //setSize(500, 500);
-        setTitle("Conversor alura"); //titulo
+        setTitle("Conversor de moneda"); //titulo
         setBounds(250,250,900,900); //tamanio y posicion inicial de la ventana
         setLocationRelativeTo(null); //ventana en el centro
         iniciarComponentes();
@@ -46,8 +45,8 @@ public class Ventana extends JFrame {
     private void colocarTextField (){
 
         JTextField texto1 = new JTextField();
-        JTextField texto2 = new JTextField();
-        JTextField texto3 = new JTextField();
+        //JTextField texto2 = new JTextField();
+        //JTextField texto3 = new JTextField();
 
         texto1.setBounds(100, 100, 100,30);
         panel.add(texto1);

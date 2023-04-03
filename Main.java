@@ -5,8 +5,13 @@ public class Main  {
 
         public static void main(String[] args) {
 
-            Ventana v = new Ventana();
-            v.setVisible(true);
+            VentanaSeleccion v0 = new VentanaSeleccion();
+            v0.setVisible(true);
+
+
+
+            //VentanaMoneda v = new VentanaMoneda();
+            //v.setVisible(true);
 
             /*
             //ventana principal
