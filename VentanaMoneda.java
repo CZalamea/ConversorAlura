@@ -17,6 +17,7 @@ public class VentanaMoneda extends JFrame {
         colocarPaneles();
         colocarEtiquetas();
         colocarTextField();
+        colocarComboBox();
 
     }
 
@@ -42,13 +43,24 @@ public class VentanaMoneda extends JFrame {
         panel.add(etiqueta);
     }
 
+    private void colocarComboBox (){
+
+        String [] opciones = {"De dolares a pesos colombianos", "De dolares a soles","De dolares a pesos argentinos", "De dolares a bolivares (Venezuela)", "De dolares a Euros", "De dolares a Yen", "De dolares a Libras", "De dolares a Yenes"};
+
+        JComboBox conversiones = new JComboBox<>(opciones);
+        conversiones.setBounds(50,100,200,25);
+        panel.add(conversiones);
+
+
+    }
+
     private void colocarTextField (){
 
         JTextField texto1 = new JTextField();
         //JTextField texto2 = new JTextField();
         //JTextField texto3 = new JTextField();
 
-        texto1.setBounds(100, 100, 100,30);
+        texto1.setBounds(50, 200, 200,30);
         panel.add(texto1);
     }
 
