@@ -86,7 +86,7 @@ public class VentanaMoneda extends JFrame {
 
     private void colocarTextField (){
 
-        JTextField texto1 = new JTextField();
+        //JTextField texto1 = new JTextField();
         //JTextField texto2 = new JTextField();
         //JTextField texto3 = new JTextField();
         texto1.setBounds(50, 200, 200,30);
@@ -104,9 +104,9 @@ public class VentanaMoneda extends JFrame {
             }
         });
 
-        JTextField texto2 = new JTextField();
+        //JTextField texto2 = new JTextField();
         texto2.setBounds(50,400, 200,30);
-        texto2.setEditable(false);
+        texto2.setEditable(true);
 
         panel.add(texto1);
         panel.add(texto2);
@@ -147,7 +147,7 @@ public class VentanaMoneda extends JFrame {
 
                 double valorConvertido = 0;
 
-                try {
+                /*try {
                     double valor = Double.parseDouble(texto1.getText());
                     valorConvertido = valor * tasaConversion;
                     DecimalFormat formatoDecimal = new DecimalFormat("#,###.##");
@@ -157,26 +157,30 @@ public class VentanaMoneda extends JFrame {
                     JOptionPane.showMessageDialog(panel, "Por favor ingrese un valor numérico válido en el campo de texto.");
                     texto1.setText("");
                     texto1.requestFocus();
-                }
+                }*/
 
                 /*if (!texto1.getText().isEmpty()) {
                     double valor = Double.parseDouble(texto1.getText().trim());
-                    double valorConvertido = valor * tasaConversion;
+                    valorConvertido = valor * tasaConversion;
                     texto2.setText(String.valueOf(valorConvertido));
                     System.out.println(valor);
                     System.out.println(valorConvertido);
                 } else {
                     double valor = Double.parseDouble(texto1.getText().trim());
-                    double valorConvertido = valor * tasaConversion;
+                    valorConvertido = valor * tasaConversion;
                     texto2.setText(String.valueOf(valorConvertido));
                     System.out.println(valor);
                     System.out.println(valorConvertido);
                 }*/
 
-            /*double valorConvertido = Double.parseDouble(texto1.getText()) * tasaConversion;
+            valorConvertido = Double.parseDouble(texto1.getText());
+            double valorFinal = valorConvertido * tasaConversion;
+
             System.out.println("Valor convertido: " + valorConvertido);
-            texto2.setText(String.valueOf(valorConvertido));
-            System.out.println("Texto2: " + texto2.getText());*/
+            System.out.println("Valor Final: " + valorFinal);
+
+            texto2.setText(valorFinal + "");
+            System.out.println("Texto2: " + texto2.getText());
 
 
                 //double valorConvertido = Double.parseDouble(texto1.getText()) * tasaConversion;
